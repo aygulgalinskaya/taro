@@ -1,719 +1,83 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mystic Oracle — Айгуль Галинская</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Georgia,serif;
-background:#050505;
-color:#f5e7c2;
-overflow-x:hidden;
-}
-
-body::before{
-content:'';
-position:fixed;
-inset:0;
-background:url('back.jpg') center/cover no-repeat;
-opacity:.22;
-z-index:-3;
-}
-
-body::after{
-content:'';
-position:fixed;
-inset:0;
-background:linear-gradient(to bottom,rgba(0,0,0,.82),rgba(0,0,0,.94));
-z-index:-2;
-}
-
-.container{
-max-width:1180px;
-margin:auto;
-padding:24px;
-}
-
-.hero{
-background:rgba(15,15,15,.72);
-border:1px solid rgba(255,255,255,.08);
-border-radius:36px;
-padding:40px;
-backdrop-filter:blur(14px);
-margin-bottom:34px;
-}
-
-.hero-wrap{
-display:flex;
-align-items:center;
-gap:34px;
-flex-wrap:wrap;
-}
-
-.avatar{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-object-position:center top;
-border:3px solid rgba(214,184,108,.45);
-box-shadow:0 20px 60px rgba(0,0,0,.5);
-}
-
-.hero h1{
-font-size:52px;
-margin-bottom:14px;
-}
-
-.hero p{
-font-size:18px;
-line-height:1.8;
-color:#ddd;
-max-width:760px;
-}
-
-.buttons{
-display:flex;
-gap:14px;
-flex-wrap:wrap;
-margin-top:22px;
-justify-content:center;
-}
-
-.btn{
-background:linear-gradient(135deg,#d6b86c,#f0d28f);
-color:#111;
-padding:15px 24px;
-border:none;
-border-radius:999px;
-font-weight:700;
-font-size:16px;
-cursor:pointer;
-text-decoration:none;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-2px) scale(1.02);
-}
-
-.section{
-margin-top:36px;
-background:rgba(18,18,18,.74);
-border:1px solid rgba(255,255,255,.06);
-border-radius:34px;
-padding:42px 26px;
-text-align:center;
-}
-
-.section h2{
-font-size:52px;
-margin-bottom:16px;
-}
-
-.section p{
-color:#d2d2d2;
-line-height:1.7;
-max-width:800px;
-margin:auto;
-}
-
-textarea{
-width:100%;
-margin-top:22px;
-background:#071212;
-border:1px solid rgba(255,255,255,.08);
-color:#fff;
-padding:18px;
-min-height:120px;
-border-radius:22px;
-font-size:16px;
-}
-
-.cards{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:32px;
-}
-
-.card{
-width:220px;
-perspective:1200px;
-cursor:pointer;
-}
-
-.card-inner{
-position:relative;
-width:100%;
-height:380px;
-transform-style:preserve-3d;
-transition:1s;
-}
-
-.card.flipped .card-inner{
-transform:rotateY(180deg);
-}
-
-.face{
-position:absolute;
-inset:0;
-backface-visibility:hidden;
-border-radius:22px;
-overflow:hidden;
-box-shadow:0 15px 40px rgba(0,0,0,.5);
-}
-
-.face img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.front{
-transform:rotateY(180deg);
-}
-
-.card-title{
-margin-top:14px;
-font-size:18px;
-}
-
-.result{
-margin-top:34px;
-background:rgba(0,0,0,.36);
-border-radius:28px;
-padding:28px;
-text-align:left;
-line-height:1.9;
-}
-
-.result h3{
-font-size:34px;
-margin-bottom:18px;
-color:#f3d899;
-}
-
-.summary{
-margin-top:24px;
-padding:22px;
-background:rgba(255,255,255,.03);
-border-radius:22px;
-}
-
-.footer-buttons{
-margin-top:24px;
-display:flex;
-gap:14px;
-flex-wrap:wrap;
-}
-
-@media(max-width:768px){
-
-.hero h1,
-.section h2{
-font-size:38px;
-}
-
-.card{
-width:170px;
-}
-
-.card-inner{
-height:300px;
-}
-
-.avatar{
-width:160px;
-height:160px;
-}
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<section class="hero">
-
-<div class="hero-wrap">
-
-<img src="photo.jpg" class="avatar">
-
-<div>
-
-<h1>Айгуль Галинская</h1>
-
-<p>
-В своей работе я соединяю психологию, нейрокоучинг, Матрицу Судьбы, Таро, руны, энергопрактики, немного магии и отливки воском.
-
-Этот оракул создан как пространство, где можно получить ориентир, увидеть скрытые причины происходящего и понять, куда сейчас важно направить внимание.
-</p>
-
-<div class="buttons">
-
-<a class="btn" href="https://t.me/aigul_karma" target="_blank">
-Telegram
-</a>
-
-<a class="btn" href="https://max.ru/join/jv41Dc6yQ7gsYUAEx2B3aLTTnGmGHKGBSGX1i_kJFhM" target="_blank">
-MAX
-</a>
-
-</div>
-</div>
-</div>
-</section>
-
-<section class="section">
-
-<h2>Карта дня</h2>
-
-<p>
-Открой одну карту и получи энергию, возможные события и совет на сегодняшний день.
-</p>
-
-<div class="buttons">
-<button class="btn" onclick="startDay()">
-Получить карту дня ✨
-</button>
-</div>
-
-<div class="cards" id="dayCards"></div>
-
-<div id="dayResult"></div>
-
-</section>
-
-<section class="section">
-
-<h2>Расклад на ситуацию</h2>
-
-<p>
-1 карта — что происходит сейчас.  
-2 карта — причина.  
-3 карта — совет что делать дальше.
-</p>
-
-<textarea id="question" placeholder="Напишите свой запрос..."></textarea>
-
-<div class="buttons">
-<button class="btn" onclick="startSpread()">
-Открыть расклад ✨
-</button>
-</div>
-
-<div class="cards" id="spreadCards"></div>
-
-<div id="spreadResult"></div>
-
-</section>
-
-<section class="section">
-
-<h2>Совет на неделю</h2>
-
-<p>
-Три карты покажут:
-работу и деньги, отношения и общую энергию недели.
-</p>
-
-<div class="buttons">
-<button class="btn" onclick="startWeek()">
-Получить совет недели ✨
-</button>
-</div>
-
-<div class="cards" id="weekCards"></div>
-
-<div id="weekResult"></div>
-
-</section>
-
-</div>
-
-<script>
-
-const deck = [
-
-{
-name:'Солнце',
-img:'cards/sun.jpg',
-text:'Энергия ясности, восстановления и возвращения внутренней уверенности.'
-},
-
-{
-name:'Императрица',
-img:'cards/empress.jpg',
-text:'Карта ресурса, тела, заботы о себе и возвращения к своим желаниям.'
-},
-
-{
-name:'Туз Кубков',
-img:'cards/ace_cups.jpg',
-text:'Период эмоционального обновления и более честного контакта с собой.'
-},
-
-{
-name:'3 Пентаклей',
-img:'cards/three_pentacles.jpg',
-text:'Постепенно выстраивается стабильная основа.'
-},
-
-{
-name:'Рыцарь Жезлов',
-img:'cards/knight_wands.jpg',
-text:'Ситуация требует движения и смелости.'
-},
-
-{
-name:'Королева Пентаклей',
-img:'cards/queen_pentacles.jpg',
-text:'Возвращение чувства опоры, устойчивости и внутренней безопасности.'
-},
-
-{
-name:'6 Кубков',
-img:'cards/six_cups.jpg',
-text:'Прошлое напоминает о себе.'
-},
-
-{
-name:'Паж Кубков',
-img:'cards/page_cups.jpg',
-text:'Карта эмоциональной открытости.'
-},
-
-{
-name:'10 Жезлов',
-img:'cards/ten_wands.jpg',
-text:'Ты слишком долго несла всё на себе.'
-}
-
-];
-
-function randomCard(){
-return deck[Math.floor(Math.random()*deck.length)];
-}
-
-function createCard(container,callback){
-
-const card=randomCard();
-
-const wrap=document.createElement('div');
-
-wrap.className='card';
-
-wrap.innerHTML=`
-
-<div class="card-inner">
-
-<div class="face back">
-<img src="back.jpg">
-</div>
-
-<div class="face front">
-<img src="${card.img}">
-</div>
-
-</div>
-
-<div class="card-title">
-Нажми, чтобы открыть
-</div>
-`;
-
-let opened=false;
-
-wrap.onclick=()=>{
-
-if(opened) return;
-
-opened=true;
-
-wrap.classList.add('flipped');
-
-wrap.querySelector('.card-title').innerHTML=card.name;
-
-callback(card);
-
-};
-
-document.getElementById(container).appendChild(wrap);
-
-}
-
-function shareSite(){
-
-if(navigator.share){
-
-navigator.share({
-title:'Mystic Oracle',
-url:location.href
-});
-
-}else{
-
-navigator.clipboard.writeText(location.href);
-
-alert('Ссылка скопирована ✨');
-
-}
-
-}
-
-function startDay(){
-
-document.getElementById('dayCards').innerHTML='';
-document.getElementById('dayResult').innerHTML='';
-
-createCard('dayCards',(card)=>{
-
-document.getElementById('dayResult').innerHTML=`
-
-<div class="result">
-
-<h3>${card.name}</h3>
-
-<p>
-<strong>Энергия дня:</strong><br>
-${card.text}
-</p>
-
-<br>
-
-<p>
-<strong>Возможные события:</strong><br>
-Сегодня особенно важно обращать внимание на своё эмоциональное состояние и реакции.
-</p>
-
-<br>
-
-<p>
-<strong>Совет:</strong><br>
-Не пытайся прожить этот день через давление на себя.
-</p>
-
-<div class="summary">
-
-На бесплатной диагностике я помогу тебе увидеть:
-что именно удерживает тебя сейчас,
-и как можно выйти из этого состояния
-без бесконечных проработок и откатов.
-
 </div>
 
 <div class="footer-buttons">
-
-<a class="btn"
-href="https://aygulgalinskaya.github.io/oracul/"
-target="_blank">
-Узнать свой сценарий сейчас
-</a>
-
-<button class="btn" onclick="shareSite()">
-Поделиться / сохранить
-</button>
-
+<a class="btn" href="https://t.me/m/ZM8rt97KOGNi" target="_blank">Записаться на полный расклад</a>
+<a class="btn" href="https://aygulgalinskaya.github.io/oracul/" target="_blank">Узнать свой сценарий сейчас</a>
+<a class="btn" href="https://t.me/aigul_karma/1257" target="_blank">Как ты сливаешь энергию</a>
+<button class="btn" onclick="shareSite()">Поделиться / сохранить</button>
 </div>
 
-</div>
-`;
-
-});
-
-}
-
-function startSpread(){
-
-document.getElementById('spreadCards').innerHTML='';
-document.getElementById('spreadResult').innerHTML='';
-
-let opened=[];
-
-for(let i=0;i<3;i++){
-
-createCard('spreadCards',(card)=>{
-
-opened.push(card);
-
-if(opened.length===3){
-
-showSpread(opened);
-
-}
-
-});
-
-}
-
-}
-
-function showSpread(cards){
-
-document.getElementById('spreadResult').innerHTML=`
-
-<div class="result">
-
-<h3>Общая картина ситуации</h3>
-
-<p>
-Сейчас ситуация показывает внутренний переходный этап.
-</p>
-
-<br>
-
-<p>
-Главная причина происходящего —
-накопленное эмоциональное напряжение.
-</p>
-
-<br>
-
-<p>
-Совет расклада —
-перестать жить только через контроль.
-</p>
-
-<div class="summary">
-
-Хотите увидеть свою полную картину и почему так происходит?
-
-В раскладе вы получили ориентир.
-В личной работе я смотрю глубже:
-где запускается повторение сценария,
-как это влияет на деньги, отношения,
-реализацию и состояние.
-
-</div>
-
-<div class="footer-buttons">
-
-<a class="btn"
-href="https://t.me/m/ZM8rt97KOGNi"
-target="_blank">
-Записаться на полный расклад
-</a>
-
-<a class="btn"
-href="https://aygulgalinskaya.github.io/oracul/"
-target="_blank">
-Узнать свой сценарий сейчас
-</a>
-
-<a class="btn"
-href="https://t.me/aigul_karma/1257"
-target="_blank">
-Как ты сливаешь энергию
-</a>
-
-<button class="btn" onclick="shareSite()">
-Поделиться / сохранить
-</button>
-
-</div>
-
-</div>
-`;
-
+</div>`;
 }
 
 function startWeek(){
-
 document.getElementById('weekCards').innerHTML='';
 document.getElementById('weekResult').innerHTML='';
 
 let opened=[];
 
 for(let i=0;i<3;i++){
-
 createCard('weekCards',(card)=>{
-
 opened.push(card);
-
 if(opened.length===3){
-
-showWeek(opened);
-
+showWeek(opened)
 }
-
-});
-
+})
 }
-
 }
 
 function showWeek(cards){
 
-document.getElementById('weekResult').innerHTML=`
+const card1=cards[0];
+const card2=cards[1];
+const card3=cards[2];
 
+document.getElementById('weekResult').innerHTML=`
 <div class="result">
 
-<h3>Послание недели</h3>
+<h3>Энергия недели</h3>
 
 <p>
-<strong>Работа и деньги:</strong><br>
-Неделя показывает необходимость действовать спокойнее.
+Эта неделя показывает внутренний переход.
+Ты можешь особенно остро почувствовать: старые способы жить и справляться больше не дают ощущения устойчивости.
 </p>
 
 <br>
 
-<p>
-<strong>Отношения:</strong><br>
-Важно больше говорить о чувствах.
-</p>
+<h3>Работа и деньги — ${card1.name}</h3>
+<p>${card1.text}<br><br>Сейчас деньги и реализация очень зависят от твоего эмоционального состояния.</p>
 
 <br>
 
-<p>
-<strong>Энергия недели:</strong><br>
-Главная тема недели —
-восстановление внутренней опоры.
-</p>
+<h3>Отношения — ${card2.name}</h3>
+<p>${card2.text}<br><br>Неделя показывает необходимость более честного эмоционального контакта — прежде всего с собой.</p>
+
+<br>
+
+<h3>Твоё состояние — ${card3.name}</h3>
+<p>${card3.text}<br><br>Главная энергия недели — перестать жить только через внутреннее напряжение.</p>
 
 <div class="summary">
+<h3>Главный смысл недели</h3>
 
-Эта неделя не про борьбу,
-а про внутреннее выравнивание.
+<p>
+Эта неделя не про борьбу.
+Она про внутреннее выравнивание и постепенный выход из старого эмоционального состояния.
+</p>
 
 </div>
 
 <div class="footer-buttons">
-
-<a class="btn"
-href="https://t.me/m/ZM8rt97KOGNi"
-target="_blank">
-Полный расклад по ситуации
-</a>
-
-<a class="btn"
-href="https://t.me/m/ZM8rt97KOGNi"
-target="_blank">
-Расклад на месяц
-</a>
-
-<button class="btn" onclick="shareSite()">
-Поделиться / сохранить
-</button>
-
+<a class="btn" href="https://t.me/m/ZM8rt97KOGNi" target="_blank">Полный расклад по ситуации</a>
+<a class="btn" href="https://t.me/m/ZM8rt97KOGNi" target="_blank">Расклад на месяц</a>
+<a class="btn" href="https://t.me/aigul_karma/1257" target="_blank">Как ты сливаешь энергию</a>
+<button class="btn" onclick="shareSite()">Поделиться / сохранить</button>
 </div>
 
-</div>
-`;
-
+</div>`;
 }
 
 </script>
-
 </body>
 </html>
