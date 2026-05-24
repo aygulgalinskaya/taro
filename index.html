@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mystic Oracle — Айгуль Галинская</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#035450;
+color:#f6ead0;
+overflow-x:hidden;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:24px;
+}
+
+.hero,
+.section{
+background:rgba(0,0,0,.28);
+backdrop-filter:blur(12px);
+border-radius:34px;
+padding:36px;
+margin-bottom:34px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.hero-wrap{
+display:flex;
+align-items:center;
+gap:34px;
+flex-wrap:wrap;
+}
+
+.avatar{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+object-position:center top;
+border:3px solid rgba(255,255,255,.2);
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:68px;
+margin-bottom:14px;
+}
+
+.hero p{
+line-height:1.9;
+font-size:16px;
+max-width:760px;
+color:#f0f0f0;
+}
+
+.section h2{
+font-family:'Cormorant Garamond',serif;
+font-size:56px;
+text-align:center;
+margin-bottom:16px;
+}
+
+.section p{
+line-height:1.8;
+color:#f0f0f0;
+text-align:center;
+}
+
+.buttons,
+.footer-buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:24px;
+justify-content:center;
+}
+
+.btn{
+background:linear-gradient(135deg,#d6b86c,#f3ddb1);
+color:#111;
+padding:14px 22px;
+border:none;
+border-radius:999px;
+font-weight:700;
+cursor:pointer;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px) scale(1.03);
+}
+
+textarea{
+width:100%;
+min-height:120px;
+margin-top:24px;
+padding:18px;
+border-radius:24px;
+background:#062f2d;
+border:1px solid rgba(255,255,255,.1);
+color:#fff;
+font-size:16px;
+resize:none;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.card{
+width:210px;
+perspective:1200px;
+cursor:pointer;
+}
+
+.card-inner{
+position:relative;
+width:100%;
+height:360px;
+transform-style:preserve-3d;
+transition:1s;
+}
+
+.card.flipped .card-inner{
+transform:rotateY(180deg);
+}
+
+.face{
+position:absolute;
+inset:0;
+backface-visibility:hidden;
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.face img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.front{
+transform:rotateY(180deg);
+}
+
+.result{
+margin-top:32px;
+padding:28px;
+border-radius:28px;
+background:rgba(0,0,0,.28);
+line-height:2;
+animation:fadeUp .9s ease;
+}
+
+.result h3{
+font-family:'Cormorant Garamond',serif;
+font-size:38px;
+margin-bottom:16px;
+}
+
+.summary{
+margin-top:28px;
+padding:24px;
+background:rgba(255,255,255,.04);
+border-radius:24px;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:768px){
+
+.hero h1,
+.section h2{
+font-size:42px;
+}
+
+.avatar{
+width:170px;
+height:170px;
+}
+
+.card{
+width:160px;
+}
+
+.card-inner{
+height:280px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="hero">
+
+<div class="hero-wrap">
+
+<img src="photo.jpg" class="avatar">
+
+<div>
+
+<h1>Айгуль Галинская</h1>
+
+<p>
+
+Я — Айгуль. Практик, проводник и специалист по глубокой трансформации состояния человека.
+
+В своей работе я соединяю психологию, коучинг, нейроподход, Матрицу Судьбы, Таро, руны, энергопрактики и магические техники.
+
+Я не про крайности, запугивание и «магический театр». Мне близок осознанный и бережный подход, где эзотерика не заменяет реальность, а помогает глубже понять причины происходящего, восстановить внутреннее состояние и вернуть человеку опору.
+
+Но бывает и так, что человек старается, работает над собой, а всё равно снова сталкивается с одними и теми же проблемами, тревогой, выгоранием и ощущением, будто жизнь стоит на месте.
+
+В такие моменты важно смотреть глубже.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn" href="https://t.me/aigul_karma" target="_blank">
+Telegram
+</a>
+
+<a class="btn" href="https://max.ru/join/jv41Dc6yQ7gsYUAEx2B3aLTTnGmGHKGBSGX1i_kJFhM" target="_blank">
+MAX
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Карта дня</h2>
+
+<p>
+Открой карту и получи энергию дня, возможные события и совет.
+</p>
+
+<div class="buttons">
+<button class="btn" onclick="startDay()">
+Получить карту дня ✨
+</button>
+</div>
+
+<div class="cards" id="dayCards"></div>
+
+<div id="dayResult"></div>
+
+</section>
+
+<section class="section">
+
+<h2>Расклад на ситуацию</h2>
+
+<p>
+1 карта — что происходит сейчас.
+2 карта — глубинная причина.
+3 карта — что поможет изменить ситуацию.
+</p>
+
+<textarea id="question" placeholder="Напиши свой запрос..."></textarea>
+
+<div class="buttons">
+<button class="btn" onclick="startSpread()">
+Открыть расклад ✨
+</button>
+</div>
+
+<div class="cards" id="spreadCards"></div>
+
+<div id="spreadResult"></div>
+
+</section>
+
+<section class="section">
+
+<h2>Совет на неделю</h2>
+
+<p>
+Три карты покажут: работу и деньги, отношения и общую энергию недели.
+</p>
+
+<div class="buttons">
+<button class="btn" onclick="startWeek()">
+Получить совет недели ✨
+</button>
+</div>
+
+<div class="cards" id="weekCards"></div>
+
+<div id="weekResult"></div>
+
+</section>
+
+</div>
+
+<script>
+
+const deck = [
+{
+name:'Солнце',
+img:'cards/sun.jpg',
+text:'Ты постепенно выходишь из эмоционального напряжения. Эта карта приносит ясность, ощущение жизни и возвращение внутренней уверенности.'
+},
+{
+name:'Луна',
+img:'cards/moon.jpg',
+text:'Сейчас внутри слишком много тревоги и недосказанности. Ты можешь путаться между страхами и реальностью.'
+},
+{
+name:'Императрица',
+img:'cards/empress.jpg',
+text:'Карта женственности, внутреннего ресурса, тела и возвращения к себе.'
+},
+{
+name:'Дьявол',
+img:'cards/devil.jpg',
+text:'Эмоциональные привязки, страх отпустить старое и внутренние зависимости.'
+},
+{
+name:'Звезда',
+img:'cards/star.jpg',
+text:'Даже если сейчас тяжело, внутри уже начинается восстановление и возвращение надежды.'
+},
+{
+name:'10 Жезлов',
+img:'cards/ten_wands.jpg',
+text:'Ты слишком долго тащила всё на себе. Карта показывает эмоциональное перенапряжение и усталость.'
+}
+];
+
+function randomCard(){
+return deck[Math.floor(Math.random()*deck.length)];
+}
+
+function createCard(container,callback){
+
+const card=randomCard();
+
+const wrap=document.createElement('div');
+
+wrap.className='card';
+
+wrap.innerHTML=`
+<div class="card-inner">
+
+<div class="face back">
+<img src="back.jpg">
+</div>
+
+<div class="face front">
+<img src="${card.img}">
+</div>
+
+</div>
+`;
+
+let opened=false;
+
+wrap.onclick=()=>{
+
+if(opened)return;
+
+opened=true;
+
+wrap.classList.add('flipped');
+
+callback(card);
+
+};
+
+document.getElementById(container).appendChild(wrap);
+
+}
+
+function shareSite(){
+
+if(navigator.share){
+
+navigator.share({
+title:'Mystic Oracle',
+url:location.href
+});
+
+}else{
+
+navigator.clipboard.writeText(location.href);
+alert('Ссылка скопирована ✨');
+
+}
+
+}
+
+function renderCTA(){
+return `
+<div class="summary">
+
+<h3>Что дальше?</h3>
+
+<p>
+
+Если чувствуешь,
+что готова выйти из этого состояния,
+хождения по кругу
+и повторяющихся сценариев —
+приходи на бесплатную диагностику.
+
+На нейросессии я покажу:
+какой сценарий не даёт тебе прийти к желаемому,
+где ты ещё не замечаешь,
+как он влияет на твою жизнь,
+и как я смогу помочь тебе выйти из этого состояния
+без месяцев проработок и откатов назад.
+
+</p>
+
+</div>
+
+<div class="footer-buttons">
+
+<a class="btn"
+href="https://t.me/m/iZ3JqJPRYTVi"
+target="_blank">
+Записаться на диагностику
+</a>
+
+<a class="btn"
+href="https://aygulgalinskaya.github.io/oracul/"
+target="_blank">
+Узнать свой сценарий сейчас
+</a>
+
+<a class="btn"
+href="https://t.me/aigul_karma/1257"
+target="_blank">
+Как ты сливаешь энергию
+</a>
+
+<button class="btn"
+onclick="shareSite()">
+Поделиться / сохранить
+</button>
+
+</div>
+`;
+}
+
+function startDay(){
+
+document.getElementById('dayCards').innerHTML='';
+document.getElementById('dayResult').innerHTML='';
+
+createCard('dayCards',(card)=>{
+
+setTimeout(()=>{
+
+document.getElementById('dayResult').innerHTML=`
+
+<div class="result">
+
+<h3>${card.name}</h3>
+
+<p>
+<strong>Энергия дня:</strong><br><br>
+${card.text}
+</p>
+
+<p>
+Сегодня пространство может особенно ярко подсветить то,
+что ты слишком долго пыталась не замечать внутри себя.
+</p>
+
+<p>
+<strong>Совет:</strong><br><br>
+Не дави на себя и не пытайся снова всё выдержать через силу.
+</p>
+
+${renderCTA()}
+
+</div>
+`;
+
+},700);
+
+});
+
+}
+
+function startSpread(){
+
+document.getElementById('spreadCards').innerHTML='';
+document.getElementById('spreadResult').innerHTML='';
+
+let opened=[];
+
+for(let i=0;i<3;i++){
+
+createCard('spreadCards',(card)=>{
+
+opened.push(card);
+
+if(opened.length===3){
+
+showSpread(opened);
+
+}
+
+});
+
+}
+
+}
+
+function showSpread(cards){
+
+const c1=cards[0];
+const c2=cards[1];
+const c3=cards[2];
+
+setTimeout(()=>{
+
+document.getElementById('spreadResult').innerHTML=`
+
+<div class="result">
+
+<h3>Краткая энергия расклада</h3>
+
+<p>
+Сейчас ты находишься в точке,
+где старые эмоциональные сценарии уже перестают работать.
+</p>
+
+<h3>1 карта — Что происходит сейчас<br>${c1.name}</h3>
+
+<p>
+${c1.text}
+</p>
+
+<h3>2 карта — Причина ситуации<br>${c2.name}</h3>
+
+<p>
+${c2.text}
+</p>
+
+<h3>3 карта — Что поможет изменить ситуацию<br>${c3.name}</h3>
+
+<p>
+${c3.text}
+</p>
+
+<div class="summary">
+
+<h3>Главный смысл расклада</h3>
+
+<p>
+Карты показывают:
+ты уже подходишь к точке внутреннего перехода.
+Старый способ жить постепенно перестаёт работать,
+и именно поэтому жизнь так сильно подталкивает тебя к изменениям.
+</p>
+
+</div>
+
+${renderCTA()}
+
+</div>
+`;
+
+},900);
+
+}
+
+function startWeek(){
+
+document.getElementById('weekCards').innerHTML='';
+document.getElementById('weekResult').innerHTML='';
+
+let opened=[];
+
+for(let i=0;i<3;i++){
+
+createCard('weekCards',(card)=>{
+
+opened.push(card);
+
+if(opened.length===3){
+
+showWeek(opened);
+
+}
+
+});
+
+}
+
+}
+
+function showWeek(cards){
+
+const c1=cards[0];
+const c2=cards[1];
+const c3=cards[2];
+
+setTimeout(()=>{
+
+document.getElementById('weekResult').innerHTML=`
+
+<div class="result">
+
+<h3>Энергия недели</h3>
+
+<p>
+Эта неделя показывает внутренний переход и необходимость вернуть себе эмоциональную устойчивость.
+</p>
+
+<h3>Работа и деньги — ${c1.name}</h3>
+
+<p>
+${c1.text}
+</p>
+
+<h3>Отношения — ${c2.name}</h3>
+
+<p>
+${c2.text}
+</p>
+
+<h3>Твоё состояние — ${c3.name}</h3>
+
+<p>
+${c3.text}
+</p>
+
+<div class="summary">
+
+<h3>Главный смысл недели</h3>
+
+<p>
+Эта неделя не про борьбу.
+Она про внутреннее выравнивание и постепенный выход из старого состояния.
+</p>
+
+</div>
+
+${renderCTA()}
+
+</div>
+`;
+
+},900);
+
+}
+
+</script>
+
+</body>
+</html>
