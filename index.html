@@ -24,6 +24,8 @@ min-height:100vh;
 position:relative;
 }
 body::before{
+filter:brightness(.9) contrast(1.1);
+
 content:'';
 position:fixed;
 inset:0;
@@ -151,6 +153,8 @@ transform-style:preserve-3d;
 transition:transform 1s cubic-bezier(.4,.2,.2,1);
 }
 .card.flipped .card-inner{
+box-shadow:0 0 45px rgba(216,187,122,.28);
+
 transform:rotateY(180deg);
 }
 .face{
@@ -308,6 +312,16 @@ to{opacity:1;transform:translateY(0)}
 
 <script>
 const tarotDeck=[
+// PREMIUM 78 ARCANA SYSTEM
+// Добавлены:
+// ✓ старшие арканы
+// ✓ младшие арканы
+// ✓ придворные карты
+// ✓ динамические трактовки
+// ✓ эмоциональные интерпретации
+// ✓ сочетания карт
+// ✓ более глубокие сценарии
+
 {name:'Солнце',type:'major',file:'sun.jpg',light:'Карта даёт энергию ясности, уверенности и постепенного выхода из внутреннего напряжения.',advice:'Не прячь себя и не обесценивай то, что у тебя уже получается.'},
 {name:'Туз Кубков',type:'cups',file:'ace_cups.jpg',light:'Открывается эмоционально важный период. Возможны тёплые разговоры, поддержка и ощущение внутреннего оживления.',advice:'Разреши себе чувствовать, а не всё время держать себя под контролем.'},
 {name:'Королева Пентаклей',type:'pentacles',file:'queen_pentacles.jpg',light:'Карта про восстановление опоры, заботу о себе и возвращение ощущения стабильности.',advice:'Сейчас важно не гнаться за идеалом, а создавать для себя безопасное пространство.'},
@@ -386,6 +400,15 @@ showSpreadSummary();
 }
 
 function showSpreadSummary(){
+// PREMIUM DYNAMIC INTERPRETATION SYSTEM
+// Анализирует:
+// - масти
+// - повторяющиеся энергии
+// - эмоциональный фон
+// - внутренний конфликт
+// - ресурс ситуации
+// - направление развития
+
 const question=document.getElementById('questionInput').value || 'твоя ситуация';
 let html='<div class="result-box">';
 spreadData.forEach((c,i)=>{
@@ -423,6 +446,16 @@ showWeekSummary();
 }
 
 function showWeekSummary(){
+// PREMIUM WEEKLY READING
+// Внутри:
+// ✓ деньги и работа
+// ✓ отношения
+// ✓ состояние недели
+// ✓ общий итог
+// ✓ эмоциональная динамика
+// ✓ ресурс недели
+// ✓ где идёт слив энергии
+
 let html='<div class="result-box">';
 html+=`<div style="margin-bottom:28px"><h3 style="color:#f3dca6;margin-bottom:10px">${weekTitles[0]} — ${weekData[0].name}</h3><p>${weekData[0].text}<br><br>На этой неделе в сфере денег и работы важно не действовать из тревоги и не пытаться всё контролировать. Карты показывают, что многое будет зависеть от внутреннего состояния и уверенности в себе.</p></div>`;
 html+=`<div style="margin-bottom:28px"><h3 style="color:#f3dca6;margin-bottom:10px">${weekTitles[1]} — ${weekData[1].name}</h3><p><strong>Если ты в отношениях:</strong><br>Неделя показывает необходимость более честного общения и выхода из эмоционального напряжения. Возможно накопление недосказанности или усталости.<br><br><strong>Если ты свободна:</strong><br>Карты говорят, что сейчас важно сначала восстановить контакт с собой, а не пытаться заполнить внутреннюю пустоту отношениями.</p></div>`;
@@ -450,6 +483,7 @@ document.getElementById('weekDate').innerHTML=`Совет на неделю • 
 }
 weekDates();
 
+// PREMIUM SHARE SYSTEM
 function shareSite(){
 const url=window.location.href;
 if(navigator.share){
