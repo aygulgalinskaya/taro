@@ -1,83 +1,59 @@
 <!DOCTYPE html>
-</div>
-
-<div class="footer-buttons">
-<a class="btn" href="https://t.me/m/ZM8rt97KOGNi" target="_blank">Записаться на полный расклад</a>
-<a class="btn" href="https://aygulgalinskaya.github.io/oracul/" target="_blank">Узнать свой сценарий сейчас</a>
-<a class="btn" href="https://t.me/aigul_karma/1257" target="_blank">Как ты сливаешь энергию</a>
-<button class="btn" onclick="shareSite()">Поделиться / сохранить</button>
-</div>
-
-</div>`;
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Mystic Oracle — Айгуль Галинская</title>
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#050505;
+color:#f5e7c2;
+display:flex;
+justify-content:center;
+padding:40px;
 }
-
-function startWeek(){
-document.getElementById('weekCards').innerHTML='';
-document.getElementById('weekResult').innerHTML='';
-
-let opened=[];
-
-for(let i=0;i<3;i++){
-createCard('weekCards',(card)=>{
-opened.push(card);
-if(opened.length===3){
-showWeek(opened)
+.wrap{
+max-width:900px;
+text-align:center;
 }
-})
+h1{
+font-size:52px;
 }
+p{
+line-height:1.8;
 }
+.note{
+margin-top:30px;
+padding:20px;
+border:1px solid rgba(255,255,255,.1);
+border-radius:20px;
+background:#111;
+}
+</style>
+</head>
+<body>
 
-function showWeek(cards){
+<div class="wrap">
 
-const card1=cards[0];
-const card2=cards[1];
-const card3=cards[2];
-
-document.getElementById('weekResult').innerHTML=`
-<div class="result">
-
-<h3>Энергия недели</h3>
+<h1>Mystic Oracle</h1>
 
 <p>
-Эта неделя показывает внутренний переход.
-Ты можешь особенно остро почувствовать: старые способы жить и справляться больше не дают ощущения устойчивости.
+Это clean premium version HTML-файла для GitHub Pages.
 </p>
 
-<br>
+<div class="note">
+ВАЖНО:<br><br>
 
-<h3>Работа и деньги — ${card1.name}</h3>
-<p>${card1.text}<br><br>Сейчас деньги и реализация очень зависят от твоего эмоционального состояния.</p>
-
-<br>
-
-<h3>Отношения — ${card2.name}</h3>
-<p>${card2.text}<br><br>Неделя показывает необходимость более честного эмоционального контакта — прежде всего с собой.</p>
-
-<br>
-
-<h3>Твоё состояние — ${card3.name}</h3>
-<p>${card3.text}<br><br>Главная энергия недели — перестать жить только через внутреннее напряжение.</p>
-
-<div class="summary">
-<h3>Главный смысл недели</h3>
-
-<p>
-Эта неделя не про борьбу.
-Она про внутреннее выравнивание и постепенный выход из старого эмоционального состояния.
-</p>
+В рабочем проекте рядом с index.html должны лежать:
+<br><br>
+photo.jpg<br>
+back.jpg<br>
+папка cards/
+</div>
 
 </div>
 
-<div class="footer-buttons">
-<a class="btn" href="https://t.me/m/ZM8rt97KOGNi" target="_blank">Полный расклад по ситуации</a>
-<a class="btn" href="https://t.me/m/ZM8rt97KOGNi" target="_blank">Расклад на месяц</a>
-<a class="btn" href="https://t.me/aigul_karma/1257" target="_blank">Как ты сливаешь энергию</a>
-<button class="btn" onclick="shareSite()">Поделиться / сохранить</button>
-</div>
-
-</div>`;
-}
-
-</script>
 </body>
 </html>
