@@ -253,6 +253,10 @@ to{opacity:1;transform:translateY(0)}
 <div class="container">
 
 <section class="hero">
+<div style="display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;margin-bottom:40px;">
+<img src="photo.jpg" alt="Айгуль Галинская" style="width:280px;height:380px;object-fit:cover;border-radius:30px;box-shadow:0 20px 60px rgba(0,0,0,.45);border:1px solid rgba(216,187,122,.2)">
+<div style="max-width:620px;text-align:left;">
+
 <h1>Mystic Oracle ✨</h1>
 <p>
 Я — Айгуль Галинская.
@@ -265,6 +269,8 @@ to{opacity:1;transform:translateY(0)}
 <div class="buttons">
 <a class="btn" href="https://t.me/aigul_karma" target="_blank">Telegram</a>
 <a class="btn" href="https://max.ru/join/jv41Dc6yQ7gsYUAEx2B3aLTTnGmGHKGBSGX1i_kJFhM" target="_blank">MAX</a>
+</div>
+</div>
 </div>
 </section>
 
@@ -280,6 +286,7 @@ to{opacity:1;transform:translateY(0)}
 <h2 class="section-title">Расклад на ситуацию</h2>
 <p class="section-sub">Напиши свой запрос и открой 3 карты. Каждая карта покажет отдельную часть ситуации.</p>
 <textarea id="questionInput" placeholder="Например: почему я снова сталкиваюсь с тревогой в отношениях? Что мешает выйти в реализацию? Что происходит в моей жизни сейчас?"></textarea>
+<div class="buttons" style="margin-top:22px"><button class="btn" onclick="startSpread()">Открыть расклад ✨</button></div>
 <div class="cards" id="spreadCards"></div>
 <div id="spreadResult"></div>
 </section>
@@ -287,6 +294,7 @@ to{opacity:1;transform:translateY(0)}
 <section class="section">
 <h2 class="section-title">Совет на неделю</h2>
 <p class="section-sub" id="weekDate"></p>
+<div class="buttons" style="margin-top:22px"><button class="btn" onclick="startWeek()">Получить совет недели ✨</button></div>
 <div class="cards" id="weekCards"></div>
 <div id="weekResult"></div>
 </section>
@@ -390,11 +398,17 @@ const spreadTitles=[
 'Что поможет изменить ситуацию'
 ];
 
+function startSpread(){
+document.getElementById('spreadCards').innerHTML='';
+document.getElementById('spreadResult').innerHTML='';
+spreadData.length=0;
 for(let i=0;i<3;i++){
-createCard('spreadCards','spread',i,(card,index)=>{
+createCard('spreadCards',i,(card,index)=>{
 spreadData[index]=card;
 if(spreadData.filter(Boolean).length===3){
 showSpreadSummary();
+}
+});
 }
 });
 }
@@ -436,11 +450,17 @@ const weekTitles=[
 'Твоё состояние и совет'
 ];
 
+function startWeek(){
+document.getElementById('weekCards').innerHTML='';
+document.getElementById('weekResult').innerHTML='';
+weekData.length=0;
 for(let i=0;i<3;i++){
-createCard('weekCards','week',i,(card,index)=>{
+createCard('weekCards',i,(card,index)=>{
 weekData[index]=card;
 if(weekData.filter(Boolean).length===3){
 showWeekSummary();
+}
+});
 }
 });
 }
